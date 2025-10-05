@@ -1,3 +1,9 @@
+/* Color palette used! 
+https://coolors.co/ced4da-3e444a-4559a0-4baaf6-1a72c3-4c6ef5-1c7ed6
+
+Copy this link to see the colors they correspond to! 
+*/
+
 /* Minimal CSS reset*/
 *,
 *::before,
@@ -5,6 +11,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --gradient-top-left: #4BAAF6;
+  --gradient-bottom-right: #1A72C3;
+  --sign-in-color: #4C6EF5;
+  --button-hover-color: #4559A0; 
+  --input-border-color: #CED4DA; 
+  --label-color: #3E444A;
+  --forgot-color: #1C7ED6;
 }
 
 body{
@@ -28,7 +45,7 @@ body{
 
 #loginInfo{
   color: white;
-  background: linear-gradient(135deg, #4BAAF6, #1A72C3);
+  background: linear-gradient(135deg, var(--gradient-top-left),  var(--gradient-bottom-right));
   padding: 2%; 
   width: 35vw; 
 }
@@ -51,7 +68,7 @@ form{
 version for buttons*/
 Button[type="Submit"]{
   color: white;
-  background-color: #4C6EF5; 
+  background-color: var(--sign-in-color); 
   padding: 2% 4%;
   border: none; 
   border-radius: 5px;
@@ -61,25 +78,25 @@ Button[type="Submit"]{
 }
 
 Button[type="Submit"]:hover {
-  background-color: #4559A0;
+  background-color: var(--button-hover-color);
   transition: 0.3s;
 }
 
 #forgot{
   text-decoration: none;
-  color: #1C7ED6;
+  color: var(--forgot-color);
   font-size: 14px;
 }
 
 #forgot:hover {
   text-decoration: underline;
-  color: #4559A0;
+  color: var(--button-hover-color);
   transition: 0.3s; 
 }
 
 input{
   border-radius: 2px; 
-  border: 2px solid #CED4DA; 
+  border: 2px solid var(--input-border-color); 
   padding: 2%;
   margin-top: 1%;
   margin-bottom: 4%;
@@ -91,7 +108,7 @@ input::placeholder{
 }
 
 label{
-  color: #3E444A;
+  color: var(--label-color);
   font-weight: bold; 
   font-size: 14px;
 }
