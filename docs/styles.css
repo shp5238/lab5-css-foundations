@@ -37,13 +37,13 @@ Copy this link to see the colors they correspond to!
 
 body{
   display: flex;
-  flex-direction: row; 
+  flex-direction: row; /*? optional*/
   height: 100vh; /*fallback*/
   height: 100dvh;
-  text-align: left; 
+  text-align: left; /*? optional*/
   margin: 0 auto; 
   font-family: Arial;
-  justify-content: center; 
+  justify-content: center; /*? optional*/
 }
 
 #loginInfo h1{
@@ -60,13 +60,13 @@ body{
   color: white;
   background: linear-gradient(135deg, var(--gradient-top-left),  var(--gradient-bottom-right));
   padding: var(--default-padding); 
-  width: 35vw; 
+  width: 100%; 
 }
 
 #loginForm{
   display: flex;
   flex-direction: column; 
-  min-width: 60%;
+  min-width: 70%;
   margin-left: 4%;
   margin-right: 2%;
   justify-content: center; 
