@@ -52,7 +52,7 @@ version for buttons*/
 Button[type="Submit"]{
   color: white;
   background-color: #4C6EF5; 
-  padding: 2%;
+  padding: 2% 4%;
   border: none; 
   border-radius: 5px;
   font-weight: 900;
@@ -62,14 +62,9 @@ Button[type="Submit"]{
 
 Button[type="Submit"]:hover {
   background-color: #4559A0;
+  transition: 0.3s;
 }
 
-/*
-password-recovery{
-  background-color: transparent;
-  color: #1C7ED6;
-}
-*/
 #forgot{
   text-decoration: none;
   color: #1C7ED6;
@@ -79,6 +74,7 @@ password-recovery{
 #forgot:hover {
   text-decoration: underline;
   color: #4559A0;
+  transition: 0.3s; 
 }
 
 input{
