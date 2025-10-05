@@ -22,12 +22,24 @@ Copy this link to see the colors they correspond to!
   --input-border-color: #CED4DA; 
   --label-color: #3E444A;
   --forgot-color: #1C7ED6;
+  
+  /* font sizes and styling*/
+  --loginInfo-h1: 2.5rem;
+  --general-font-size: 0.875rem;/*14px*/
+  --button-font-weight: 900; 
+  
+  /* Misc */
+  --border-rad: 0.313rem; /*5px*/
+  --transition-time: 0.3s; 
+  --default-padding: 2%; 
+  --marg-bottom: 4%;
 }
 
 body{
   display: flex;
   flex-direction: row; 
-  height: 100vh; /*deprecated, use better units*/
+  height: 100vh; /*fallback*/
+  height: 100dvh;
   text-align: left; 
   margin: 0 auto; 
   font-family: Arial;
@@ -35,18 +47,19 @@ body{
 }
 
 #loginInfo h1{
-  font-size: 2.5rem;
+  font-size: var(--loginInfo-h1);
+  margin-bottom: var(--marg-bottom);
 }
 
 #loginInfo p{
   line-height: 1.5;
-  max-width: 20rem; /*so width stays constant*/
+  max-width: 18rem; /*so paragraph matches image*/
 }
 
 #loginInfo{
   color: white;
   background: linear-gradient(135deg, var(--gradient-top-left),  var(--gradient-bottom-right));
-  padding: 2%; 
+  padding: var(--default-padding); 
   width: 35vw; 
 }
 
@@ -55,6 +68,7 @@ body{
   flex-direction: column; 
   min-width: 60%;
   margin-left: 4%;
+  margin-right: 2%;
   justify-content: center; 
 }
 
@@ -71,46 +85,46 @@ Button[type="Submit"]{
   background-color: var(--sign-in-color); 
   padding: 2% 4%;
   border: none; 
-  border-radius: 5px;
-  font-weight: 900;
-  font-size: 14px;
+  border-radius: var(--border-rad);
+  font-weight: var(--button-font-weight);
+  font-size: var(--general-font-size);
   cursor: pointer;
 }
 
 Button[type="Submit"]:hover {
   background-color: var(--button-hover-color);
-  transition: 0.3s;
+  transition: var(--transition-time);
 }
 
 #forgot{
   text-decoration: none;
   color: var(--forgot-color);
-  font-size: 14px;
+  font-size: var(--general-font-size);
 }
 
 #forgot:hover {
   text-decoration: underline;
   color: var(--button-hover-color);
-  transition: 0.3s; 
+  transition: var(--transition-time); 
 }
 
 input{
-  border-radius: 2px; 
+  border-radius: var(--border-rad); 
   border: 2px solid var(--input-border-color); 
-  padding: 2%;
+  padding: var(--default-padding);
   margin-top: 1%;
-  margin-bottom: 4%;
+  margin-bottom: var(--marg-bottom);
   width: 100%; 
 }
 
 input::placeholder{
-  font-size: 14px;
+  font-size: var(--general-font-size);
 }
 
 label{
   color: var(--label-color);
   font-weight: bold; 
-  font-size: 14px;
+  font-size: var(--general-font-size);
 }
 
 button-row{
@@ -118,4 +132,3 @@ button-row{
   align-items: center; 
   justify-content: space-between;
 }
-
