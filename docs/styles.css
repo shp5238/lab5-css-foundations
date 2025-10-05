@@ -1,22 +1,26 @@
 body{
   display: flex;
   flex-direction: row; 
-  height: 100vh;
+  height: 100vh; /*deprecated, use better units*/
   text-align: left; 
   margin: 0 auto; 
   font-family: Arial;
   justify-content: center; 
 }
 
-h1{
-  font-size: 3rem;
+#loginInfo h1{
+  font-size: 2.5rem;
+}
+
+#loginInfo p{
+  line-height: 1.5;
+  max-width: 20rem; /*so width stays constant*/
 }
 
 #loginInfo{
   color: white;
-  background: linear-gradient(45deg, #4BAAF6, #1A72C3);
+  background: linear-gradient(135deg, #4BAAF6, #1A72C3);
   padding: 2%; 
-  justify-content: center;
   width: 35vw; 
 }
 
@@ -24,8 +28,7 @@ h1{
   display: flex;
   flex-direction: column; 
   min-width: 60%;
-  margin: auto;
-  margin-left: 2%;
+  margin-left: 4%;
   justify-content: center; 
 }
 
@@ -35,36 +38,62 @@ form{
   justify-content: left;
 }
 
-button{
+/* make some generalized
+version for buttons*/
+Button[type="Submit"]{
   color: white;
   background-color: #4C6EF5; 
   padding: 2%;
   border: none; 
   border-radius: 5px;
   font-weight: 900;
-  font-size: 16px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
+Button[type="Submit"]:hover {
+  background-color: #4559A0;
+}
+
+/*
 password-recovery{
   background-color: transparent;
   color: #1C7ED6;
+}
+*/
+#forgot{
+  text-decoration: none;
+  color: #1C7ED6;
+  font-size: 14px;
+}
+
+#forgot:hover {
+  text-decoration: underline;
+  color: #4559A0;
 }
 
 input{
   border-radius: 2px; 
   border: 2px solid #CED4DA; 
   padding: 2%;
-  margin: 2%;
+  margin-top: 1%;
+  margin-bottom: 4%;
   width: 100%; 
+}
+
+input::placeholder{
+  font-size: 14px;
 }
 
 label{
   color: #3E444A;
   font-weight: bold; 
+  font-size: 14px;
 }
 
 button-row{
-  flex-direction: column; 
-  margin-top: 1rem;
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
 }
 
