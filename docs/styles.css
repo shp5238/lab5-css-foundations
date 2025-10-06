@@ -1,5 +1,5 @@
 /* Color palette used! 
-https://coolors.co/ced4da-3e444a-4559a0-4baaf6-1a72c3-4c6ef5-1c7ed6
+https://coolors.co/ced4da-757575-3e444a-4559a0-4baaf6-1a72c3-4c6ef5-1c7ed6
 
 Copy this link to see the colors they correspond to! 
 */
@@ -19,7 +19,8 @@ Copy this link to see the colors they correspond to!
   --gradient-bottom-right: #1A72C3;
   --sign-in-color: #4C6EF5;
   --button-hover-color: #4559A0; 
-  --input-border-color: #CED4DA; 
+  --input-border-color: #CED4DA;
+  --input-text-color: #757575; 
   --label-color: #3E444A;
   --forgot-color: #1C7ED6;
   
@@ -48,7 +49,7 @@ body{
 
 #loginInfo h1{
   font-size: var(--loginInfo-h1);
-  margin-bottom: 5%;
+  margin-bottom: 6%;
 }
 
 #loginInfo p{
@@ -123,6 +124,7 @@ input{
 
 input::placeholder{
   font-size: var(--general-font-size);
+  color: var(--input-text-color);
 }
 
 label{
