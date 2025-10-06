@@ -32,7 +32,7 @@ Copy this link to see the colors they correspond to!
   --border-rad: 0.313rem; /*5px*/
   --transition-time: 0.3s; 
   --default-padding: 2%; 
-  --marg-bottom: 4%;
+  --default-marg: 2%;
 }
 
 body{
@@ -48,7 +48,7 @@ body{
 
 #loginInfo h1{
   font-size: var(--loginInfo-h1);
-  margin-bottom: var(--marg-bottom);
+  margin-bottom: 5%;
 }
 
 #loginInfo p{
@@ -70,9 +70,9 @@ body{
 #loginForm{
   display: flex;
   flex-direction: column; 
-  min-width: 70%;
-  margin-left: 4%;
-  margin-right: 2%;
+  min-width: 73%;
+  margin-left: 3%;
+  margin-right: var(--default-marg);
   justify-content: center; 
 }
 
@@ -87,7 +87,7 @@ version for buttons*/
 Button[type="Submit"]{
   color: white;
   background-color: var(--sign-in-color); 
-  padding: 2% 4%;
+  padding: 1% 2%;
   border: none; 
   border-radius: var(--border-rad);
   font-weight: var(--button-font-weight);
@@ -117,7 +117,7 @@ input{
   border: 2px solid var(--input-border-color); 
   padding: var(--default-padding);
   margin-top: 1%;
-  margin-bottom: var(--marg-bottom);
+  margin-bottom: var(--default-marg);
   width: 100%; 
 }
 
