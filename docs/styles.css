@@ -61,6 +61,10 @@ body{
   background: linear-gradient(135deg, var(--gradient-top-left),  var(--gradient-bottom-right));
   padding: var(--default-padding); 
   width: 100%; 
+  /*to center it vertically with flexbox:*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #loginForm{
