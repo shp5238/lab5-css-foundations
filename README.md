@@ -42,3 +42,19 @@ Here is the link to my website:
     - [No CSS Grid](https://shp5238.github.io/lab5-css-foundations/docs/altLayouts/login_card_no_css_grid.html)
     - [Fullscreen login](https://shp5238.github.io/lab5-css-foundations/docs/altLayouts/login_fullscreen.html)
     - [alternate stylesheet](https://shp5238.github.io/lab5-css-foundations/docs/altLayouts/styles.css)
+
+- Color Palette used for this project: 
+   [https://coolors.co/ced4da-757575-3e444a-4559a0-4baaf6-1a72c3-4c6ef5-1c7ed6](https://coolors.co/ced4da-757575-3e444a-4559a0-4baaf6-1a72c3-4c6ef5-1c7ed6)
+
+## Screenshots
+- Firefox
+  ![firefox](screenshots/lab5_firefox.png)
+
+- Chrome
+  ![chrome](screenshots/lab5_chrome.png)
+
+- Safari
+  ![safari](screenshots/lab5_safari.png)
+
+- Vivaldi
+  ![vivaldi](screenshots/lab5_vivaldi.png)
