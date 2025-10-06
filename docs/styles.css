@@ -31,6 +31,7 @@ Copy this link to see the colors they correspond to!
 
   /* Misc */
   --border-rad: 0.313rem; /*5px*/
+  --card-border-rad: 0.625rem; /*10 px*/
   --transition-time: 0.3s;
   --default-padding: 2%;
   --default-marg: 2%;
@@ -38,25 +39,22 @@ Copy this link to see the colors they correspond to!
 
 body {
   display: flex;
-  flex-direction: row; /*? optional*/
   height: 100vh; /*fallback*/
   height: 100dvh;
-  text-align: left; /*? optional*/
   margin: 0 auto;
   font-family: Arial;
-  justify-content: center; /*? optional*/
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
   display: grid;
-  grid-template-columns: 0.3fr 1fr;  /* two columns */
-  width: 95%;
-  max-height: 80vh;
-  background-color: white;
-  border-radius: 10px;
+  grid-template-columns: 0.3fr 0.9fr;  /* two columns */
+  width: 95vw;
+  height: 95vh;
+  border-radius: var(--card-border-rad);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  margin: 2%;
 }
 
 #loginInfo h1 {
@@ -66,10 +64,10 @@ body {
 
 #loginInfo p {
   line-height: 1.5;
-  max-width: 18rem; /*so paragraph matches image*/
+  max-width: 18rem; /*so paragraph matches img*/
 }
 
-#loginInfo {
+Section[id="loginInfo"] {
   color: white;
   background: linear-gradient(
     135deg,
@@ -84,13 +82,15 @@ body {
   justify-content: center;
 }
 
-#loginForm {
+Section[id="loginForm"] {
   display: flex;
   flex-direction: column;
-  min-width: 72%;
-  margin-left: 3%;
+  min-width: 70%;
+  margin-left: 4%;
   margin-right: var(--default-marg);
   justify-content: center;
+  padding-top: var(--default-padding);
+  padding-bottom: var(--default-padding); 
 }
 
 form {
@@ -99,12 +99,10 @@ form {
   justify-content: left;
 }
 
-/* make some generalized
-version for buttons*/
 Button[type="Submit"] {
   color: white;
   background-color: var(--sign-in-color);
-  padding: 1% 2%;
+  padding: 1% var(--default-padding);
   border: none;
   border-radius: var(--border-rad);
   font-weight: var(--button-font-weight);
