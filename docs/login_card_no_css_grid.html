@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 5 - Login Page</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head>
+<!-- Modifications from default stylesheet -->
+<style>
+  .card {
+    display: flex;
+    flex-direction: row;
+    width: 95%; 
+    min-height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden; /* gradient doesn’t bleed outside */
+    margin: auto; /* centers it vertically/horizontally */
+    align-self: center;
+  }
+
+  #loginForm{
+    min-width: 72%;
+    margin-left: 3%;
+  }
+
+</style>
+
+<body>
+  <!-- Shreya Pasupuleti - Lab 5 -->
+  <div class="card">
+  <div id="loginInfo">
+  <h1>Super Ai Dash</h1>
+  <p>Ai powered finance from Apes, alt-coins, and flat currency, we promise you won't lose <strong><em>all</em></strong> of it.
+  </p>
+</div>
+
+<section id="loginForm">
+  <form action="login.php" method="post">
+    <form-field>
+      <label for="emailField">Email Address</label>
+      <input type="email" name="email" id="emailField" placeholder="you@example.com" autofocus required>
+    </form-field>
+
+    <form-field>
+      <label for="passwordField">Password</label>
+      <input type="password" name="password" id="passwordField" placeholder="Enter your password" required>
+      </form-field>
+  </form>
+
+  <button-row>
+    <button type="Submit">Sign In
+    </button>
+
+    <password-recovery>
+      <a href="forgot.php" id="forgot">
+        Forgot password?
+      </a>
+    </password-recovery>
+  </button-row>
+</section>
+</div>
+
+</body>
+</html>
