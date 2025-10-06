@@ -15,97 +15,81 @@ Copy this link to see the colors they correspond to!
 
 :root {
   /* Colors */
-  --gradient-top-left: #4baaf6;
-  --gradient-bottom-right: #1a72c3;
-  --sign-in-color: #4c6ef5;
-  --button-hover-color: #4559a0;
-  --input-border-color: #ced4da;
-  --input-text-color: #757575;
-  --label-color: #3e444a;
-  --forgot-color: #1c7ed6;
-
+  --gradient-top-left: #4BAAF6;
+  --gradient-bottom-right: #1A72C3;
+  --sign-in-color: #4C6EF5;
+  --button-hover-color: #4559A0; 
+  --input-border-color: #CED4DA;
+  --input-text-color: #757575; 
+  --label-color: #3E444A;
+  --forgot-color: #1C7ED6;
+  
   /* font sizes and styling*/
   --loginInfo-h1: 2.5rem;
-  --general-font-size: 0.875rem; /*14px*/
-  --button-font-weight: 900;
-
+  --general-font-size: 0.875rem;/*14px*/
+  --button-font-weight: 900; 
+  
   /* Misc */
   --border-rad: 0.313rem; /*5px*/
-  --transition-time: 0.3s;
-  --default-padding: 2%;
+  --transition-time: 0.3s; 
+  --default-padding: 2%; 
   --default-marg: 2%;
 }
 
-body {
+body{
   display: flex;
   flex-direction: row; /*? optional*/
   height: 100vh; /*fallback*/
   height: 100dvh;
   text-align: left; /*? optional*/
-  margin: 0 auto;
+  margin: 0 auto; 
   font-family: Arial;
   justify-content: center; /*? optional*/
 }
 
-.card {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr;  /* two columns */
-  width: 95%;
-  max-height: 80vh;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  margin: 2%;
-}
-
-#loginInfo h1 {
+#loginInfo h1{
   font-size: var(--loginInfo-h1);
   margin-bottom: 6%;
 }
 
-#loginInfo p {
+#loginInfo p{
   line-height: 1.5;
   max-width: 18rem; /*so paragraph matches image*/
 }
 
-#loginInfo {
+#loginInfo{
   color: white;
-  background: linear-gradient(
-    135deg,
-    var(--gradient-top-left),
-    var(--gradient-bottom-right)
-  );
-  padding: 6%;
-  width: 100%;
+  background: linear-gradient(135deg, var(--gradient-top-left),  var(--gradient-bottom-right));
+  padding: var(--default-padding); 
+  width: 100%; 
   /*to center it vertically with flexbox:*/
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-#loginForm {
+#loginForm{
   display: flex;
-  flex-direction: column;
-  min-width: 72%;
+  flex-direction: column; 
+  min-width: 73%;
   margin-left: 3%;
   margin-right: var(--default-marg);
-  justify-content: center;
+  justify-content: center; 
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+form{
+  display: flex; 
+  flex-direction: column; 
   justify-content: left;
 }
 
 /* make some generalized
 version for buttons*/
-Button[type="Submit"] {
+Button[type="Submit"]{
   color: white;
-  background-color: var(--sign-in-color);
+  background-color: var(--sign-in-color); 
   padding: 1% 2%;
-  border: none;
+  border: none; 
   border-radius: var(--border-rad);
   font-weight: var(--button-font-weight);
   font-size: var(--general-font-size);
@@ -117,7 +101,7 @@ Button[type="Submit"]:hover {
   transition: var(--transition-time);
 }
 
-#forgot {
+#forgot{
   text-decoration: none;
   color: var(--forgot-color);
   font-size: var(--general-font-size);
@@ -126,32 +110,31 @@ Button[type="Submit"]:hover {
 #forgot:hover {
   text-decoration: underline;
   color: var(--button-hover-color);
-  transition: var(--transition-time);
+  transition: var(--transition-time); 
 }
 
-input {
-  border-radius: var(--border-rad);
-  border: 2px solid var(--input-border-color);
+input{
+  border-radius: var(--border-rad); 
+  border: 2px solid var(--input-border-color); 
   padding: 1.5%;
   margin-top: 1%;
   margin-bottom: var(--default-marg);
-  width: 100%;
+  width: 100%; 
 }
 
-input::placeholder {
+input::placeholder{
   font-size: var(--general-font-size);
   color: var(--input-text-color);
 }
 
-label {
+label{
   color: var(--label-color);
-  font-weight: bold;
+  font-weight: bold; 
   font-size: var(--general-font-size);
 }
 
-button-row {
+button-row{
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: space-between;
 }
-
